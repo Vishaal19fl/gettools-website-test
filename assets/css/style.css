@@ -1753,6 +1753,9 @@ span.text {
  * responsive for large than 768px screen
  */
 @media (max-width: 768px) {
+  .header .navbar-link {
+    color: #111;
+  }
   .map {
     width: 100%;
     max-width: 320px;
@@ -1786,7 +1789,7 @@ span.text {
   /**
    * HEADER
    */
-
+   
   .header .container {
     gap: 30px;
   }
