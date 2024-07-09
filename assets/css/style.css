@@ -147,11 +147,12 @@ body.active {
 
 .section-subtitle {
   color: white;
-  font-size: var(--fs-11);
+  font-size: 15px;
   font-weight: var(--fw-500);
-  text-transform: uppercase;
+  
   letter-spacing: 1px;
   margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -191,6 +192,44 @@ body.active {
   align-items: center;
   gap: 15px 25px;
   margin-bottom: 50px;
+  
+}
+
+.social-links1 {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.social-link1 {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #111;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent; /* Set background to transparent */
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+}
+
+.social-link1 i {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  background: none; /* Ensure no background is applied */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+  color: inherit; /* Ensure the icon inherits the color */
+  border-radius: 0; /* Remove any border radius */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+.social-link1:hover {
+  background: #0158e3;
+  color: #fff;
+  transition: 0.3s ease;
 }
 
 .badge-wrapper,
@@ -200,6 +239,7 @@ body.active {
   flex-wrap: wrap;
   align-items: center;
   gap: 5px 10px;
+  
 }
 
 .ganre-wrapper > a {
@@ -509,6 +549,49 @@ body.active {
 .menu-open-btn {
   color: rgb(126, 126, 126);
   font-size: 40px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: ' ▼';
+  font-size: 0.6em;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-item:focus {
+  background-color: #ddd;
 }
 
 .navbar {
@@ -914,25 +997,50 @@ body.active {
   background-size: cover;
   background-position: center;
   padding-block: var(--section-padding);
-  min-height: 100vh; /* Updated: Set height to 100vh */
+  min-height: 100vh; /* Ensure the section takes full viewport height */
   width: 100vw;
   font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
 }
+
 .contact .section-subtitle {
   color: #222;
 }
+
 .contact .section-title {
   color: #111;
 }
+
 .contact .flex-wrapper {
   margin-bottom: 50px;
+  text-align: center; /* Center the title and subtitle text */
 }
+
+.contact .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact .form-container {
+  width: 100%;
+  max-width: 600px; /* Restrict the maximum width for better responsiveness */
+  padding: 0 2rem;
+  box-sizing: border-box; /* Include padding in width calculations */
+  text-align: left;
+}
+
 .contact .row .form-container input,
 .contact .row .form-container textarea {
   outline: none;
   border: none;
   height: 2rem; /* Adjust the height to your desired size */
-  width: 40%; /* Adjust the width to your desired size */
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 85%; /* Adjust the max width */
   background: none;
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -941,40 +1049,21 @@ body.active {
   font-size: 20px; /* Adjust the font size to your desired size */
 }
 
-.contact .flex-wrapper .section-subtitle {
-  padding: 0%;
+button.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin-top: 1rem;
 }
-.contact .row {
-  display: flex;
 
-  align-items: center;
-  justify-content: center;
+button.btn:hover {
+  background-color: #0056b3;
 }
-.contact .row p {
-  color: #222;
-}
-.contact .row select {
-  font-size: 15px;
-}
-.contact .row .image {
-  margin-bottom: 30px;
-}
-.contact .row select {
-  padding: 10px;
-  margin-bottom: 20px;
-  color: rgb(107, 105, 105);
-}
-.contact .row button {
-  padding: 10px 25px;
-  text-decoration: none;
-  border: 2px solid rgb(34, 34, 34);
-  background: transparent;
-  font: inherit;
-  color: #111;
-  margin-top: 10px;
-  font-size: 12px;
-  border-radius: 20px;
-}
+
 .contact .row h4 {
   padding: 22px 20px;
   font-size: 17px;
@@ -984,37 +1073,21 @@ body.active {
   display: inline-block;
   background: rgba(139, 66, 255, 0.507);
 }
+
 .contact .row button:hover {
   background: #111;
   color: white;
 }
 
-.contact .row .form-container {
-  width: 50%;
-  text-align: left;
-  padding: 0 5rem;
-}
 .contact p {
   font-size: 19px;
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
 .contact #field-select {
   padding: 10px;
   margin: 15px;
-}
-.contact .row .form-container input,
-textarea {
-  outline: none;
-  border: none;
-  height: 4rem;
-  background: none;
-  border-radius: 0.5rem;
-  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-  padding: 0 1rem;
-  color: #000000;
-  margin: 1rem 0;
-  font-size: 1.6rem;
 }
 
 .contact .row .form-container .inputBox {
@@ -1022,6 +1095,7 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+
 .contact .row .form-container .inputBox .selectbox {
   border: 1px solid lightgray;
   color: #333;
@@ -1269,6 +1343,9 @@ span.text {
   gap: 10px;
   color: #fff;
 }
+.quicklink-list{
+  flex-direction: column;
+}
 
 .footer-link {
   color: #fff;
@@ -1353,7 +1430,7 @@ span.text {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #006cff;
+  background: #0dab3c;
   color: white;
   width: 50px;
   height: 50px;
@@ -1859,6 +1936,19 @@ span.text {
   html {
     font-size: 50%;
   }
+  .contact{
+    background: #f3f3f3;
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--section-padding);
+  min-height: 100vh; /* Ensure the section takes full viewport height */
+  width: 100vw;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  align-items: center;
+  }
   .contact .row {
     flex-flow: column;
   }
@@ -2247,7 +2337,7 @@ span.text {
 /* Mobile-specific styles for preloader */
 @media only screen and (max-width: 767px) {
   #preloader {
-    background: url(/assets/images/mobilepreloader.gif) no-repeat center center;
+    background: url(/assets/images/mobilepreloader1.gif) no-repeat center center;
     background-size: cover; /* Adjust background-size for mobile */
     /* Add any additional mobile-specific styles here */
   }
