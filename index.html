@@ -158,33 +158,9 @@
               <p class="hero-subtitle">  GET - Your Perfect Tooling Solution</p>
             </h1>
       
-            <div class="meta-wrapper">
-              <!-- <div class="badge-wrapper" id="soc">
-                <div class="badge badge-outline" style="padding: 5px 10px">
-                  <a href="https://your-facebook-url.com" " style="text-decoration: none; color: white;">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                  
-                </div>
+            
       
-                <div class="badge badge-outline" style="padding: 5px 10px">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-                <div class="badge badge-outline" style="padding: 5px 10px">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </div>
-                <div class="badge badge-outline" style="padding: 5px 10px">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </div> -->
-              </div>
-      
-              <div class="ganre-wrapper">
-                <!-- <div class="badge badge-outline" style="padding: 5px 10px">
-                  <a href="#cta" style="color: white">Subscribe to our Newsletter</a>
-                  <a href="#"></a>
-                </div>
-              </div> -->
-            </div>
+              
       
             <button class="btn btn-primary" onclick="window.location.href='#about-us'">
               <span>explore</span>
@@ -596,7 +572,7 @@ const totalSlides = Math.ceil(sliderContainer.scrollWidth / cardWidth);
 
 // Adjust for direction while ensuring valid boundaries:
 if (direction === "left") {
-  currentSlide = currentSlide-1;
+  currentSlide = Math.min(currentSlide - 1, -5);
 } else {
   currentSlide = Math.min(currentSlide + 1, 100); // Allow scrolling to the last slide
 }
@@ -613,9 +589,6 @@ sliderContainer.scrollTo({
 //               scrollSlider2("right");
 //             }, 3000);
         </script>
-        
-        
-        
         
       </section>
 
