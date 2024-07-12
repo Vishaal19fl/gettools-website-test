@@ -326,6 +326,14 @@ body.active {
   display: grid;
   gap: 50px;
 }
+.movies-list5 {
+  display: grid;
+  gap: 50px;
+}
+.movies-list6 {
+  display: grid;
+  gap: 50px;
+}
 
 .movie-card {
   height: 100%;
@@ -457,6 +465,24 @@ body.active {
 }
 
 .movies-list4.has-scrollbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-bottom: 25px;
+}
+
+.movies-list5.has-scrollbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-bottom: 25px;
+}
+
+.movies-list6.has-scrollbar {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
@@ -815,6 +841,17 @@ body.active {
   scroll-snap-align: start;
 }
 
+.products-list .movies-list5 > li {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.products-list .movies-list6 > li {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -857,6 +894,12 @@ body.active {
   }
 
   .products-list.movies-list4.has-scrollbar {
+    color: #fff;
+  }
+  .products-list.movies-list5.has-scrollbar {
+    color: #fff;
+  }
+  .products-list.movies-list6.has-scrollbar {
     color: #fff;
   }
   .products-list .arrow-btn {
@@ -1687,6 +1730,14 @@ span.text {
     grid-template-columns: 1fr 1fr;
     gap: 60px 30px;
   }
+  .movies-list5 {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 30px;
+  }
+  .movies-list6 {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 30px;
+  }
 
   /**
    * HERO
@@ -1717,6 +1768,12 @@ span.text {
   }
 
   .products-list .movies-list4 > li {
+    min-width: calc(50% - 15px);
+  }
+  .products-list .movies-list5 > li {
+    min-width: calc(50% - 15px);
+  }
+  .products-list .movies-list6 > li {
     min-width: calc(50% - 15px);
   }
 
@@ -2014,6 +2071,12 @@ span.text {
   .movies-list4 {
     grid-template-columns: repeat(3, 1fr);
   }
+  .movies-list5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .movies-list6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /**
    * HEADER
@@ -2105,6 +2168,12 @@ span.text {
   }
 
   .products-list .movies-list4 > li {
+    min-width: calc(33.33% - 20px);
+  }
+  .products-list .movies-list5 > li {
+    min-width: calc(33.33% - 20px);
+  }
+  .products-list .movies-list6 > li {
     min-width: calc(33.33% - 20px);
   }
 
@@ -2227,6 +2296,12 @@ span.text {
   .movies-list4 {
     grid-template-columns: repeat(4, 1fr);
   }
+  .movies-list5 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .movies-list6 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   /**
    * HEADER
@@ -2270,6 +2345,13 @@ span.text {
   .products-list .movies-list4 > li {
     min-width: calc(25% - 22.5px);
   }
+  .products-list .movies-list5 > li {
+    min-width: calc(25% - 22.5px);
+  }
+  .products-list .movies-list6 > li {
+    min-width: calc(25% - 22.5px);
+  }
+
 
   /**
    * SERVICE
