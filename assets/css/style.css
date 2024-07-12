@@ -2023,6 +2023,23 @@ span.text {
     width: 80vw;
     height: 60vw;
   }
+  .navbar-link {
+    
+    font-size: var(--fs-9);
+ 
+    padding: 15px 15px;
+  }
+  .dropdown-toggle::after {
+    content: ' ▼';
+    font-size: var(--fs-9);
+  }
+  .dropdown-item {
+    padding: 10px 20px;
+    font-size: var(--fs-9);
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
 
   .contact .row .form-container {
     width: 100%;
