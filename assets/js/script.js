@@ -66,6 +66,7 @@ function isInViewport(element) {
 function handleCounterAnimation() {
   let valueDisplays = document.querySelectorAll(".num");
   let interval = 4000;
+  let animationSpeed = 5; // Adjust animation speed here (lower value = faster)
 
   valueDisplays.forEach((valueDisplay) => {
     if (isInViewport(valueDisplay)) {
@@ -75,19 +76,18 @@ function handleCounterAnimation() {
       let counter = setInterval(function () {
         startValue += 1;
         valueDisplay.textContent = startValue;
-        if (startValue == endValue) {
+        if (startValue >= endValue) {
           clearInterval(counter);
         }
-      }, duration);
+      }, animationSpeed); // Use animationSpeed instead of duration for faster animation
     }
   });
 }
 
-
 window.addEventListener("scroll", handleCounterAnimation);
 
+handleCounterAnimation(); // Run once on page load
 
-handleCounterAnimation();
 
 window.addEventListener("load", function () {
   var preloader = document.getElementById("preloader");
