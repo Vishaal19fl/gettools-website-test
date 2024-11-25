@@ -83,13 +83,13 @@ window.addEventListener("scroll", handleCounterAnimation);
 handleCounterAnimation(); // Run once on page load
 
 
-window.addEventListener("load", function () {
-  var preloader = document.getElementById("preloader");
+// window.addEventListener("load", function () {
+//   var preloader = document.getElementById("preloader");
 
-  setTimeout(function() {
-    preloader.classList.add("loaded");
-  }, 1500);
-});
+//   setTimeout(function() {
+//     preloader.classList.add("loaded");
+//   }, 1500);
+// });
 
 
 
