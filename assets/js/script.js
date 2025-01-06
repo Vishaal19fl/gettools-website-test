@@ -81,7 +81,7 @@ function handleCounterAnimation() {
 window.addEventListener("scroll", handleCounterAnimation);
 
 handleCounterAnimation(); // Run once on page load
-
+//preloader removed
 
 // window.addEventListener("load", function () {
 //   var preloader = document.getElementById("preloader");
